@@ -1,73 +1,58 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        simauto
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <section id="introduction">
+      <b-container>
+        <b-row>
+          <b-form @submit="getData">
+            <b-form-file
+              v-model="file_krs"
+              placeholder="Cek KRS"
+              drop-placeholder="Taruh KRS"
+            ></b-form-file>
+
+            <b-button type="submit">Check</b-button>
+          </b-form>
+        </b-row>
+      </b-container>
+    </section>
   </div>
 </template>
 
 <script>
-export default {}
+  import axios from 'axios';
+
+  const FormData = require('form-data');
+
+  export default {
+    data() {
+      return {
+        file_krs: null
+      }
+    },
+
+    methods: {
+      getData(event) {
+        event.preventDefault();
+
+        const file_krs_name = this.file_krs.name;
+
+        const data_krs = new FormData();
+        data_krs.append('file', this.file_krs, file_krs_name);
+
+        axios({
+          method: 'post',
+          url: 'https://krs-reader.herokuapp.com/post_krs',
+          data: data_krs
+        }).then((response) => {
+          console.log(response.data)
+        }).catch((err) => {
+          console.error(err)
+        })
+      }
+    }
+  }
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

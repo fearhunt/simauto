@@ -11,13 +11,23 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'static/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' }
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    // Import scss files
+    '~assets/scss/main.scss'
   ],
+
+  styleResources: {
+    scss: [
+      // Import color pallete
+      '~assets/scss/base/_colours.scss'
+    ]
+  },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
