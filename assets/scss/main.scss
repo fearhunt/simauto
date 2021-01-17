@@ -1,7 +1,8 @@
 // Import base
-@import 'base/reset';
+@import 'base/variables';
 @import 'base/colours';
 @import 'base/typography';
+@import 'base/reset';
 
 // Import components 
 @import 'components/navbar';

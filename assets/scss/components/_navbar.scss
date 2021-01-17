@@ -1,7 +1,26 @@
 .navbar {
-  box-shadow: 0 1px 10px grey;
-
+  padding: 1.3rem 5rem;
+  border-radius: $simauto-radius;
+  
   &.bg-simauto {
-    background: rgba(223, 223, 223, 0.2);
+    background: $primary-color;
+    color: white;
+  }
+
+  .simauto-nav-link {
+    font-size: 1.25rem;
+    color: white;
+    opacity: 0.6;
+    transition: $simauto-transition;
+
+    &:hover {
+      color: $secondary-color;
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
   }
 }
