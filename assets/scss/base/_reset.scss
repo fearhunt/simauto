@@ -23,3 +23,9 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
+section {
+  margin-top: -4rem;
+  padding: 12rem 0 8rem 0;
+  border-radius: $simauto-radius;
+}
