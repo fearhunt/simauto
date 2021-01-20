@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="fixed-top" toggleable="lg" variant="simauto">
+  <b-navbar class="fixed-top simauto-border-radius" toggleable="lg" variant="simauto">
     <b-navbar-brand>
       <h3 style="color: white">SimAuto</h3>
       <!-- <nuxt-link to="/"> -->

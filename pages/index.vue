@@ -1,6 +1,54 @@
 <template>
   <div>
-    <section id="introduction">
+    <section id="introduction" class="simauto-border-radius bg-primary-simauto">
+      <b-container class="h-100">
+        <b-row class="align-items-center h-100">
+          <b-col class="d-none d-md-block">
+            brand
+          </b-col>
+
+          <b-col class="text-center">
+            <h1 class="title text-white">
+              SimAuto
+            </h1>
+
+            <h2 class="subtitle">
+              Generator jadwal KRS-mu menjadi urut dalam bentuk foto dan integrasi dengan Google Calendar
+            </h2>
+
+            <button class="btn btn-secondary-simauto">
+              Upload PDF
+            </button>
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
+
+    <section id="how-it-works" class="simauto-border-radius">
+      <b-container>
+        <b-row>
+          <b-col cols="12" class="text-center mb-2">
+            <p class="brief-title">
+              <span class="text-secondary-simauto">SimAuto</span>
+              <span> > </span>
+              <span class="text-primary-simauto">How It Works</span>
+            </p>
+
+            <h1 class="title">
+              How It Works
+            </h1>
+
+            <h2 class="subtitle">
+              Lorem ipsum dolor jamet.
+            </h2>
+          </b-col>
+
+          
+        </b-row>
+      </b-container>
+    </section>
+
+    <section>
       <b-container>
         <b-row>
           <b-form @submit="getData">
@@ -80,6 +128,11 @@
 </script>
 
 <style>
+  #introduction {
+    height: calc(108vh + 4rem);
+    padding-top: 12rem;
+  }
+
   #test {
     width: 100px;
     height: 100px;

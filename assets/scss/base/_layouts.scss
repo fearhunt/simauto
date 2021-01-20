@@ -1,0 +1,16 @@
+.simauto {
+  &-border-radius {
+    border-radius: $simauto-radius;
+  }
+}
+
+.bg {
+  &-primary-simauto {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  &-secondary-simauto {
+    background-color: $secondary-color;
+  }
+}

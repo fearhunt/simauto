@@ -1,5 +1,6 @@
 .title {
   font-family:
+    'Nunito',
     'Quicksand',
     'Source Sans Pro',
     -apple-system,
@@ -10,16 +11,32 @@
     Arial,
     sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 3rem;
   letter-spacing: 1px;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
-  color: #526488;
+  font-size: 2rem;
   word-spacing: 5px;
   padding-bottom: 15px;
+}
+
+.text {
+  &-primary-simauto {
+    color: $primary-color;
+  }
+
+  &-secondary-simauto {
+    color: $secondary-color;
+  }
+}
+
+.brief-title {
+  font-weight: 900;
+  font-size: 0.95rem;
+  margin-bottom: 1.15rem;
 }

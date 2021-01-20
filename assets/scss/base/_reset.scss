@@ -1,5 +1,6 @@
 html {
   font-family:
+    'Nunito',
     'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
@@ -17,6 +18,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -24,8 +29,9 @@ html {
   margin: 0;
 }
 
+
+
 section {
   margin-top: -4rem;
-  padding: 12rem 0 8rem 0;
-  border-radius: $simauto-radius;
+  padding: 8rem 0;
 }

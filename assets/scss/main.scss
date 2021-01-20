@@ -1,8 +1,10 @@
 // Import base
 @import 'base/variables';
-@import 'base/colours';
+@import 'base/colors';
 @import 'base/typography';
+@import 'base/layouts';
 @import 'base/reset';
 
 // Import components 
 @import 'components/navbar';
+@import 'components/buttons';
