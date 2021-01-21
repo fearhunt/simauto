@@ -45,7 +45,7 @@
             </div>
 
             <b-row class="my-4">
-              <b-col v-for="work in works" :key="work" class="my-3" sm="12" md="6" lg="3">
+              <b-col v-for="work in works" :key="work.id" class="my-3" sm="12" md="6" lg="3">
                 <b-card class="mx-auto text-center">
                   <i :class="'fa fa-' + work.icon" aria-hidden="true"></i>
 
@@ -85,7 +85,7 @@
             </div>
 
             <b-row class="my-4">
-              <b-col v-for="team in teams" :key="team" class="team-personal my-3" sm="12" md="4">
+              <b-col v-for="team in teams" :key="team.id" class="team-personal my-3" sm="12" md="4">
                 <b-img fluid rounded="circle" :src="team.pic_url"></b-img>
 
                 <h4 class="title mt-3 mb-0">
@@ -102,6 +102,16 @@
               </b-col>
             </b-row>
           </b-col>
+        </b-row>
+      </b-container>
+    </section>
+
+    <section id="foot" class="pb-5 bg-primary-simauto">
+      <b-container>
+        <b-row>
+          <p class="mx-auto mb-0">
+            &copy; Copyright <strong>SimAuto</strong>, 2020
+          </p>
         </b-row>
       </b-container>
     </section>
@@ -168,21 +178,21 @@
           {
             id: 1,
             name: 'Akmalda Seto W',
-            pic_url: require("~/assets/img/firhan.png"),
+            pic_url: require("~/assets/img/akmal@1x.png"),
             role: 'UI/UX Designer',
             desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny'
           },
           {
             id: 2,
             name: 'Benaya Caesario P',
-            pic_url: require("~/assets/img/firhan.png"),
+            pic_url: require("~/assets/img/benaya@1x.png"),
             role: 'Back-End Developer',
             desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny'
           },
           {
             id: 3,
             name: 'Firhan Mahdi R',
-            pic_url: require("~/assets/img/firhan.png"),
+            pic_url: require("~/assets/img/firhan@1x.png"),
             role: 'Front-End Developer',
             desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny'
           },

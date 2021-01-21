@@ -1,3 +1,4 @@
+// TODO make this work
 // let mainNavLinks = document.querySelectorAll("nav ul li a");
 // let mainSections = document.querySelectorAll("main section");
 

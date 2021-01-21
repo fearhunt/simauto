@@ -4,6 +4,7 @@
   }
 }
 
+// TODO make primary-simauto behind other section
 .bg {
   &-primary-simauto {
     background-color: $primary-color;
@@ -12,5 +13,6 @@
 
   &-secondary-simauto {
     background-color: $secondary-color;
+    color: $primary-color;
   }
 }

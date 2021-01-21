@@ -13,7 +13,6 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'static/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nunito&display=swap' }
     ]
   },
 
@@ -35,7 +34,6 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~plugins/scroll.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
