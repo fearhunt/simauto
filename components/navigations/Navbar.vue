@@ -11,8 +11,8 @@
     <b-collapse id="nav-menu-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
         <a href="#" class="simauto-nav-link">Upload</a>
-        <a href="#" class="simauto-nav-link">How It Works</a>
-        <a href="#" class="simauto-nav-link">Meet Our Team</a>
+        <a href="#how-it-works" class="simauto-nav-link">How It Works</a>
+        <a href="#our-team" class="simauto-nav-link">Meet Our Team</a>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

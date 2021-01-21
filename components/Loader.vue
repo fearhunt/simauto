@@ -46,15 +46,15 @@
       top: 30%;
       transform: translateY(-30%);
       text-indent: -9999em;
-      border-top: 1.2em solid #b8f2e64b;
-      border-right: 1.2em solid #b8f2e64b;
-      border-bottom: 1.2em solid #b8f2e64b;
-      border-left: 1.2em solid #AED9E0;
+      border-top: 0.8em solid rgba($secondary-color, 0.2);
+      border-right: 0.8em solid rgba($secondary-color, 0.2);
+      border-bottom: 0.8em solid rgba($secondary-color, 0.2);
+      border-left: 0.8em solid $secondary-color;
       -webkit-transform: translateZ(0);
       -ms-transform: translateZ(0);
       transform: translateZ(0);
       -webkit-animation: load8 1.5s infinite linear;
-      animation: load8 1.5s infinite linear;
+      animation: load8 1.25s infinite linear;
     }
   }
 

@@ -16,10 +16,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Nunito', sans-serif;
+  line-height: 1.25;
 }
 
 *,
@@ -29,9 +31,7 @@ body {
   margin: 0;
 }
 
-
-
 section {
   margin-top: -4rem;
-  padding: 8rem 0;
+  padding: 8rem 0 4rem 0;
 }

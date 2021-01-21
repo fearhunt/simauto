@@ -28,22 +28,80 @@
       <b-container>
         <b-row>
           <b-col cols="12" class="text-center mb-2">
-            <p class="brief-title">
-              <span class="text-secondary-simauto">SimAuto</span>
-              <span> > </span>
-              <span class="text-primary-simauto">How It Works</span>
-            </p>
+            <div>
+              <p class="brief-title">
+                <span class="text-secondary-simauto">SimAuto</span>
+                <span> > </span>
+                <span class="text-primary-simauto">How It Works</span>
+              </p>
 
-            <h1 class="title">
-              How It Works
-            </h1>
+              <h1 class="title">
+                How It Works
+              </h1>
 
-            <h2 class="subtitle">
-              Lorem ipsum dolor jamet.
-            </h2>
+              <h2 class="subtitle">
+                Lorem ipsum dolor jamet.
+              </h2>
+            </div>
+
+            <b-row class="my-4">
+              <b-col v-for="work in works" :key="work" class="my-3" sm="12" md="6" lg="3">
+                <b-card class="mx-auto text-center">
+                  <i :class="'fa fa-' + work.icon" aria-hidden="true"></i>
+
+                  <b-card-title class="my-3">
+                    Step {{ work.id }}
+                  </b-card-title>
+
+                  <b-card-text>
+                    {{ work.desc }}
+                  </b-card-text>
+                </b-card>
+              </b-col>
+            </b-row>
           </b-col>
+        </b-row>
+      </b-container>
+    </section>
 
-          
+    <section id="our-team" class="simauto-border-radius">
+      <b-container>
+        <b-row>
+          <b-col cols="12" class="text-center mb-2">
+            <div>
+              <p class="brief-title">
+                <span class="text-secondary-simauto">SimAuto</span>
+                <span> > </span>
+                <span class="text-primary-simauto">Meet Our Team</span>
+              </p>
+
+              <h1 class="title">
+                Meet Our Team
+              </h1>
+
+              <h2 class="subtitle">
+                Lorem ipsum dolor jamet.
+              </h2>
+            </div>
+
+            <b-row class="my-4">
+              <b-col v-for="team in teams" :key="team" class="team-personal my-3" sm="12" md="4">
+                <b-img fluid rounded="circle" :src="team.pic_url"></b-img>
+
+                <h4 class="title mt-3 mb-0">
+                  {{ team.name }}
+                </h4>
+
+                <h5 class="subtitle mb-0">
+                  {{ team.role }}
+                </h5>
+
+                <p class="desc">
+                  {{ team.desc }}
+                </p>
+              </b-col>
+            </b-row>
+          </b-col>
         </b-row>
       </b-container>
     </section>
@@ -84,6 +142,51 @@
   export default {
     data() {
       return {
+        works: [
+          {
+            id: 1,
+            icon: 'file',
+            desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny',
+          },
+          {
+            id: 2,
+            icon: 'file',
+            desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny',
+          },
+          {
+            id: 3,
+            icon: 'file',
+            desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny',
+          },
+          {
+            id: 4,
+            icon: 'file',
+            desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny',
+          }
+        ],
+        teams: [
+          {
+            id: 1,
+            name: 'Akmalda Seto W',
+            pic_url: require("~/assets/img/firhan.png"),
+            role: 'UI/UX Designer',
+            desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny'
+          },
+          {
+            id: 2,
+            name: 'Benaya Caesario P',
+            pic_url: require("~/assets/img/firhan.png"),
+            role: 'Back-End Developer',
+            desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny'
+          },
+          {
+            id: 3,
+            name: 'Firhan Mahdi R',
+            pic_url: require("~/assets/img/firhan.png"),
+            role: 'Front-End Developer',
+            desc: 'Lorem ipsum dolor sit amet, consetur sadipscing eliptr,  sed diam nomuny'
+          },
+        ],
         file_krs: null,
         datas: [],
         color_picker: '#000'
@@ -127,7 +230,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   #introduction {
     height: calc(108vh + 4rem);
     padding-top: 12rem;
@@ -137,5 +240,26 @@
     width: 100px;
     height: 100px;
     border: 1px solid black;
+  }
+
+  #our-team {
+    .team-personal {
+      .img-fluid {
+        width: 12.5rem;
+      }
+
+      .title {
+        font-size: 1.75rem;
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        color: $secondary-color;
+      }
+
+      .desc {
+        font-size: 1.15rem;
+      }
+    }
   }
 </style>
