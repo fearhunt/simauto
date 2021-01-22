@@ -6,6 +6,17 @@
   </div>
 </template>
 
+<script>
+  export default {
+    head: {
+      bodyAttrs: {
+        'data-spy': 'scroll',
+        'data-target': '.navbar'
+      }
+    }
+  }
+</script>
+
 <style>
 .button--green {
   display: inline-block;

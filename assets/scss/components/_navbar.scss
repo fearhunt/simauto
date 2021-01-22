@@ -6,20 +6,27 @@
     color: white;
   }
 
-  .simauto-nav-link {
-    font-size: 1.25rem;
-    color: white;
-    opacity: 0.6;
-    transition: $simauto-transition;
+  .nav-item {
+    .nav-link {
+      font-size: 1.25rem;
+      color: white;
+      opacity: 0.6;
+      transition: $simauto-transition;
 
-    &:hover {
-      color: $secondary-color;
-      text-decoration: none;
-      opacity: 1;
-    }
+      &:hover {
+        color: $secondary-color;
+        text-decoration: none;
+        opacity: 1;
+      }
 
-    &:not(:last-child) {
-      margin-right: 3rem;
+      &:focus {
+        outline: 0;
+        color: inherit;
+      }
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
     }
   }
 }
