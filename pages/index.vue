@@ -121,6 +121,7 @@
         <b-row>
           <b-form @submit="getData">
             <b-form-file
+              accept=".pdf"
               v-model="file_krs"
               placeholder="Cek KRS"
               drop-placeholder="Taruh KRS"
@@ -146,6 +147,7 @@
 
 <script>
   import { mapMutations } from 'vuex';
+  import swal from 'sweetalert';
 
   const FormData = require('form-data');
 
@@ -203,38 +205,50 @@
       }
     },
 
+    mounted() {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.finish()
+      })
+    },
+
     methods: {
       getData(event) {
         event.preventDefault();
 
-        this.$nextTick(() => {
-          this.$nuxt.$loading.start()
-        });
-
-        const file_krs_name = this.file_krs.name;
-
-        const data_krs_form = new FormData();
-        data_krs_form.append('file', this.file_krs, file_krs_name);
-        
-        this.$axios({
-          method: 'post',
-          url: 'https://krs-reader.herokuapp.com/post_krs',
-          data: data_krs_form
-        }).then((response) => {
+        if (this.file_krs.type === "application/pdf") {
           this.$nextTick(() => {
-            setTimeout(() => this.$nuxt.$loading.finish(), 500);
+            this.$nuxt.$loading.start()
           });
 
-          console.log('Fetch KRS data success')
-          this.datas.push(response.data)
-          document.getElementById('test').style.background = this.color_picker;
-        }).catch((err) => {
-          this.$nextTick(() => {
-            setTimeout(() => this.$nuxt.$loading.finish(), 500);
-          });
+          const file_krs_name = this.file_krs.name;
 
-          console.error(err)
-        })
+          const data_krs_form = new FormData();
+          data_krs_form.append('file', this.file_krs, file_krs_name);
+          
+          this.$axios({
+            method: 'post',
+            url: 'https://krs-reader.herokuapp.com/post_krs',
+            data: data_krs_form
+          }).then((response) => {
+            this.$nextTick(() => {
+              setTimeout(() => this.$nuxt.$loading.finish(), 500);
+            });
+
+            console.log('Fetch KRS data success')
+            this.datas.push(response.data)
+            document.getElementById('test').style.background = this.color_picker;
+          }).catch((err) => {
+            this.$nextTick(() => {
+              setTimeout(() => this.$nuxt.$loading.finish(), 500);
+            });
+
+            console.error(err)
+          })
+        }
+        else {
+          swal("hahaha")
+          this.file_krs = null;
+        }
       }
     }
   }
