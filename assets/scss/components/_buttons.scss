@@ -2,6 +2,7 @@
   padding: 0.55rem 1.75rem;
   border-radius: 1.5rem;
   font-weight: 600;
+  transition: $simauto-transition;
 
   &.btn-primary-simauto {
     background-color: $primary-color;
