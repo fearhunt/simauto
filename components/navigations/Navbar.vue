@@ -6,7 +6,11 @@
       <!-- </nuxt-link> -->
     </b-navbar-brand>
 
-    <b-nav-toggle target="nav-menu-collapse"></b-nav-toggle>
+    <b-navbar-toggle target="nav-menu-collapse">
+      <template>
+        <i class="fa fa-bars"></i>        
+      </template>
+    </b-navbar-toggle>
 
     <b-collapse id="nav-menu-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
